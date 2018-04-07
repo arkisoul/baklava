@@ -1,1 +1,1176 @@
 /* You can add global styles to this file, and also import other style files */
+/* Start: Universal Styling */
+
+/* Including Fonts */
+
+@font-face {
+  font-family: 'Raleway Regular';
+  src: url('/assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway Bold';
+  src: url('/assets/fonts/Raleway/Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway Medium';
+  src: url('/assets/fonts/Raleway/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway SemiBold';
+  src: url('/assets/fonts/Raleway/Raleway-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway Light';
+  src: url('/assets/fonts/Raleway/Raleway-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Freehand521 BT';
+  src: url('/assets/fonts/Freehand/tt1018m.ttf') format('truetype');
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, main, aside, section, article, div, span, p, a, table, thead, tbody, tfoot, tr, td, th, ul, ol, li, dt, dl, label, input, textarea, button {
+  font-family: 'Raleway Regular', sans-serif;
+}
+
+a, a:hover, a:visited, a:focus, a:active {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.custom-container {
+  width: 90%;
+  max-width: 1800;
+}
+
+.walnut-bgcolor {
+  background-color: #e5971f;
+}
+
+.hazelnut-bgcolor {
+  background-color: #f25c15;
+}
+
+.pistachio-bgcolor {
+  background-color: #06b2a3;
+}
+
+.pistachio-color {
+  color: #06b2a3;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Navigation CSS */
+.bkh-header {
+  z-index: 999;
+}
+
+.bkh-nav {
+  background-color: rgba(6, 178, 163, 0.75);
+}
+
+.bkh-nav a,
+.bkh-nav a > span {
+  text-transform: uppercase;
+  font-family: 'Raleway Bold';
+}
+
+.bkh-nav a.active{ background-color: rgba(0, 0, 0, 0.1); }
+
+.bkh-nav-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+nav .brand-logo {
+  position: static;
+}
+
+#bkh-header-cart,
+#bkh-header-cart-mobile {
+  color: #231f20;
+  padding: 15px 10px;
+}
+
+.bkh-side-nav {
+  background-color: rgba(6, 178, 163, 1);
+}
+
+.bkh-side-nav a,
+.bkh-side-nav a > span {
+  text-transform: uppercase;
+  font-family: 'Raleway Bold';
+  color: #fff;
+}
+
+.bkh-side-nav a > i {
+  color: #fff!important;
+}
+/* End Navigation CSS */
+
+/* Banner */
+.bkh-menu-banner {
+  background: url('/assets/images/banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 817px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+/* End Banner */
+
+/* Menu List */
+.bkh-menu-wrapper {
+  margin-top: 155px;
+}
+
+.bkh-menu-list-item {
+  margin-bottom: 20px;
+}
+
+.bkh-menu-item-featured-img-wrap {
+  background-color: #fff;
+}
+
+.bkh-menu-item-name {
+  padding: 15px 0px;
+  color: #fff;
+}
+
+.bkh-menu-item-body {
+  background-color: #f0f0f0;
+  padding: 10px 10px;
+}
+
+.bkh-menu-item-description .bkh-menu-item-details {
+  font-size: 14px;
+}
+
+.bkh-menu-item-availability {
+  padding: 10px 0px;
+}
+
+.bkh-menu-item-avail-status {
+  text-transform: uppercase;
+  font-family: 'Raleway Bold';
+  color: #06b2a3;
+  font-size: 16px;
+}
+
+.bkh-menu-item-price {
+  color: #231f20;
+}
+
+.bkh-menu-item-cart-add .row {
+  margin-bottom: 0px;
+}
+
+.bkh-menu-qty-label {
+  font-family: 'Raleway Bold';
+  color: #000;
+  font-size: 16px;
+  margin-left: 0!important;
+  padding-left: 0!important;
+}
+
+.bkh-menu-item-cart-add .input-number {
+  background-color: #fff;
+  border: 1px #f0f0f0;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.btn-wrapper .btn-number {
+  background-color: #1f8de5;
+  color: #fff;
+  border-radius: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 12px;
+}
+
+.btn-wrapper .btn-number + .btn-number {
+  margin-top: 5px;
+}
+
+.bkh-add-to-cart {
+  border-radius: 25px;
+  background-color: #1f8de5;
+  font-family: 'Raleway Bold';
+  font-size: 1.2rem;
+}
+/* End Menu List */
+
+/* Footer CSS */
+.bkh-footer {
+  background-color: #070706;
+  padding: 5px 0px;
+  margin-top: 25px;
+  z-index: 11;
+}
+
+.bkh-footer-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bkh-footer-social-navbar {
+  margin-left: 35px;
+}
+
+.bkh-footer-social-navs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bkh-footer-social-navs li + li {
+  margin-left: 5px;
+}
+
+.bkh-footer-social-navs a i.fa,
+.bkh-footer-social-navs a i.material-icons {
+  color: #070706;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.list-inline li{
+  display: inline;
+  list-style-type: none;
+}
+
+.bkh-footer-navbar {
+  margin: auto 0 auto auto;
+}
+
+.bkh-footer-navs a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: italic;
+}
+/* End Footer CSS */
+
+/* Checkout Page CSS */
+.bkh-checkout-container {
+  margin-top: 155px;
+}
+
+.bkh-checkout-wrapper {
+  background-color: #ffffff;
+}
+
+.bkh-checkout-title {
+  padding: 35px 15px;
+  font-family: 'Freehand521 BT';
+}
+
+.bkh-checkout-order-title,
+.bkh-checkout-shipping-title {
+  color: #fff;
+  padding: 25px 15px;
+}
+
+.bkh-checkout-shipping-form-wrapper {
+  background-color: #ebebeb;
+  padding-top: 35px;
+}
+
+.bkh-checkout-shipping-form-submit {
+  background-color: #ffffff;
+  padding: 25px 15px;
+}
+
+.bkh-checkout-shipping-form-submit button {
+  background-color: #1f8de5;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.shipping-input {
+  background-color: #fff!important;
+  border-bottom: none!important;
+}
+
+.shipping-textarea {
+  background-color: #fff!important;
+  border-bottom: none!important;
+}
+
+.shipping-input + label,
+.shipping-textarea + label {
+  left: 1.75rem!important;
+}
+
+.bkh-checkout-order-summary-table thead {
+  border: none;
+}
+
+.bkh-checkout-order-body {
+  padding: 20px 0px;
+}
+
+.bkh-checkout-order-summary-table thead th {
+  font-family: 'Freehand521 BT';
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  color: #303030;
+}
+
+.bkh-checkout-order-summary-price {
+  color: #231f20;
+  font-size: 20px;
+}
+
+.bkh-checkout-order-prod-name {
+  color: #2f2e2e;
+}
+
+.bkh-checkout-order-summary-table tbody tr + tr {
+  border-top: 10px solid #fff;
+}
+
+.bkh-checkout-order-summary-table tbody td + td {
+  background-color: #f0f0f0;
+}
+
+.bkh-checkout-order-summary-table .summary-cart-img {
+  max-width: 125px;
+}
+
+.order-grand-total-text {
+  font-family: 'Freehand521 BT';
+  font-size: 20px;
+}
+
+.order-grand-total {
+  font-size: 24px;
+  color: #1f8de5;
+}
+
+.bkh-checkout-order-summary-update {
+  border-radius: 25px;
+  background-color: #f25c15;
+  color: #fff;
+}
+
+.bkh-chkout-order-input-wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.bkh-chkout-order-input-wrapper .btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bkh-chkout-order-input-wrapper .input-number {
+  background-color: #fff;
+  border: 1px #f0f0f0;
+  text-align: center;
+  font-size: 16px;
+  width: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* End Checkout Page CSS */
+
+/* Career New Page CSS */
+.bkh-career-banner {
+  background: url('/assets/images/banner-career.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 550px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bkh-cnew-container {
+  margin-top: 155px;
+}
+
+.bkh-cnew-wrapper {
+  background-color: #fff;
+}
+
+.bkh-cnew-header {
+  padding: 35px 15px;
+  font-family: 'Freehand521 BT';
+  background-color: #fff;
+  color: #2b2727;
+}
+
+.bkh-cnew-header span {
+  font-family: 'Freehand521 BT';
+}
+
+.bkh-cnew-title {
+  color: #fff;
+  padding: 25px 15px;
+  text-transform: uppercase;
+}
+
+.bkh-cnew-body {
+  background-color: #f0f0f0;
+  padding: 35px 50px;
+  color: #000;
+}
+
+.bkh-cnew-body-content {
+  font-family: 'Raleway Light';
+}
+
+.bkh-cnew-openpos-container {
+  margin-top: 35px;
+}
+
+.bkh-cnew-openpos-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.bkh-cnew-openpos-heading {
+  text-transform: uppercase;
+  color: #383e52;
+  margin-bottom: 35px;
+  font-family: 'Raleway SemiBold';
+}
+
+#bkh-cnew-openpos-tabs li a {
+  color: #221706;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+#bkh-cnew-openpos-tabs li a.active {
+  text-transform: uppercase;
+  color: #e5971f;
+  font-family: 'Raleway Bold';
+}
+
+.bkh-tabs-content {
+  margin-top: 20px;
+  padding: 15px 0px;
+}
+
+.bkh-cnew-pos-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #2e95e7;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.bkh-cnew-pos-title {
+  color: #1f8de5;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+}
+
+.bkh-cnew-pos-subtitle {
+  color: #626262;
+  transition: all 0.5s ease-in-out;
+}
+
+.bkh-cnew-pos-link:hover .bkh-cnew-pos-title,
+.bkh-cnew-pos-link:hover .bkh-cnew-pos-subtitle {
+  color: #fff;
+}
+
+.bkh-cnew-pos-link:hover .bkh-cnew-pos-wrap {
+  background-color: #1f8de5;
+}
+
+.bkh-cnew-pos-link.active .bkh-cnew-pos-title,
+.bkh-cnew-pos-link.active .bkh-cnew-pos-subtitle {
+  color: #fff;
+}
+
+.bkh-cnew-pos-link.active .bkh-cnew-pos-wrap {
+  background-color: #1f8de5;
+}
+/* End Career New Page CSS */
+
+/* Career New Application CSS */
+.bkh-cnew-app-container {
+  margin-top: 35px;
+}
+
+.bkh-cnew-app-heading {
+  color: #383e52;
+  margin-bottom: 35px;
+  font-family: 'Raleway SemiBold';
+}
+
+.bkh-cnew-app-subheading {
+  color: #5c5c5b;
+  margin-bottom: 35px;
+  font-family: 'Raleway SemiBold';
+}
+
+.bkh-cnew-app-label {
+  font-family: 'Raleway SemiBold';
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #5c5c5b;
+}
+
+.bkh-cnew-app-sublabel {
+  font-family: 'Raleway SemiBold';
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #5c5c5b;
+}
+
+.bkh-cnew-app-submit {
+  background-color: #3d9ef0;
+  color: #fff;
+  font-family: 'Raleway Bold';
+  border-radius: 5px;
+  box-shadow: 1px 4px 1px #a7bbb9;
+  text-transform: capitalize;
+}
+
+.bkh-cnew-app-form-wrapper .bkh-cnew-app-input {
+  border: 1px solid #b1b1b1;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.bkh-cnew-app-form-wrapper .input-field.col label {
+  left: 1.5rem;
+}
+
+.input-field label.active.active-label {
+  font-family: 'Raleway Medium';
+  color: #292828;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  left: 0.75rem;
+  top: 1px;
+}
+
+.bkh-cnew-app-form-wrapper .file-btn {
+  background-color: #3d9ef0;
+  color: #fff;
+  font-family: 'Raleway Bold';
+  border-radius: 5px;
+  box-shadow: 1px 4px 1px #a7bbb9;
+  text-transform: capitalize;
+}
+
+.bkh-cnew-active-label.active {
+  top: 0.4rem;
+  font-size: 0.8rem;
+}
+/* End Career New Application CSS */
+
+/* Career New View Job CSS */
+.bkh-cnew-viewjob-container {
+  margin-top: 35px;
+}
+
+.bkh-cnew-viewjob-heading {
+  text-transform: uppercase;
+  color: #383e52;
+  margin-bottom: 35px;
+  font-size: 1rem;
+  font-family: 'Raleway SemiBold';
+}
+
+.bkh-cnew-viewjob-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.bkh-cnew-viewjob-breadcrumb-wrapper {
+  margin-bottom: 25px;
+}
+
+.bkh-breadcrumb-nav {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.bkh-breadcrumb-nav .breadcrumb {
+  color: #eb900f;
+  font-family: 'Raleway SemiBold';
+}
+
+.bkh-breadcrumb-nav .breadcrumb:last-child {
+  color: #383e52;
+}
+
+.bkh-breadcrumb-nav .breadcrumb:before {
+  color: #383e52;
+}
+
+.bkh-cnew-job-description-container {
+  background-color: #f0f0f0;
+  padding: 35px;
+}
+
+.bkh-cnew-job-description-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bkh-cnew-job-title {
+  color: #ec9417;
+  font-family: 'Raleway SemiBold';
+  font-size: 1rem;
+}
+
+.bkh-cnew-job-city {
+  color: #282727;
+  font-family: 'Raleway SemiBold';
+  font-size: 2rem;
+}
+
+.bkh-cnew-apply-btn {
+  background-color: #06b2a3;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: 'Raleway Bold';
+  border-radius: 5px;
+  box-shadow: 1px 4px 1px #9eb1af;
+}
+
+.bkh-cnew-apply-btn span {
+  text-transform: capitalize;
+  font-family: 'Raleway Bold';
+}
+
+.bkh-cnew-apply-btn i.material-icons {
+  display: none;
+}
+
+.bkh-cnew-job-description {
+  margin-top: 30px;
+}
+
+.bkh-cnew-job-des-title {
+  color: #2374ed;
+  font-family: 'Raleway SemiBold';
+  margin-bottom: 25px;
+}
+
+.bkh-cnew-job-requirement {
+  margin-top: 30px;
+}
+
+.bkh-cnew-job-req-title {
+  color: #111212;
+  font-family: 'Raleway Medium';
+  margin-bottom: 25px;
+}
+
+.bkh-cnew-job-des,
+.bkh-cnew-job-req {
+  color: #252626;
+  font-family: 'Raleway Light';
+}
+/* End Career New View Job CSS */
+
+/* About Us CSS */
+.bkh-about-container {
+  margin-top: 155px;
+}
+
+.bkh-about-wrapper {
+  background-color: #fff;
+}
+
+.bkh-about-header {
+  color: #2b2727;
+  font-family: 'Freehand521 BT';
+  padding: 35px 15px;
+  background-color: #fff;
+}
+
+.bkh-about-title {
+  color: #fff;
+  padding: 25px 15px;
+  text-transform: capitalize;
+}
+
+.bkh-about-body {
+  background-color: #f0f0f0;
+  padding: 35px 50px;
+  color: #000;
+}
+
+.bkh-about-body-content {
+  color: #000;
+  font-family: 'Raleway Light';
+}
+
+.bkh-about-body-content + .bkh-about-body-content {
+  margin-top: 15px;
+}
+
+.bkh-about-team-title {
+  color: #fff;
+  padding: 15px 10px;
+  text-transform: capitalize;
+}
+
+.bkh-about-team-body {
+  background-color: #fff;
+  padding: 35px 50px;
+  color: #000;
+}
+
+.bkh-about-team-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.bkh-about-team-img-big {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+.bkh-about-team-name {
+  font-family: 'Raleway Bold';
+  color: #1d2336;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.bkh-about-team-name-big {
+  font-size: 26px;
+}
+
+.bkh-about-team-des {
+  color: #000;
+  font-size: 14px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.bkh-about-team-des::after {
+  content: '';
+  background-color: #06b2a3;
+  height: 3px;
+  position: absolute;
+  bottom: -15px;
+  width: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.bkh-about-team-des-big::after {
+  content: '';
+  height: 5px;
+  width: 140px;
+}
+
+.bkh-about-team-des-big {
+  color: #000;
+  font-size: 16px;
+}
+
+.bkh-about-team-body-text {
+  margin-top: 50px;
+}
+
+.bkh-about-team-body-content {
+  color: #000;
+}
+
+.bkh-about-team-body-content + .bkh-about-team-body-content {
+  margin-top: 15px;
+}
+
+/* End About Us CSS */
+
+/* Contact Us CSS */
+.bkh-contact-container {
+  margin-top: 155px;
+}
+
+.bkh-contact-header {
+  color: #2b2727;
+  font-family: 'Freehand521 BT';
+  padding: 35px 15px;
+  background-color: #fff;
+}
+
+.bkh-contact-title {
+  color: #fff;
+  padding: 25px 15px;
+  text-transform: capitalize;
+}
+
+.bkh-contact-title-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.bkh-contact-social-navs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.bkh-contact-social-navs li + li {
+  margin-left: 5px;
+}
+
+.bkh-contact-social-navs a i.fa,
+.bkh-contact-social-navs a i.material-icons {
+  color: #e5971f;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.bkh-contact-body {
+  background-color: rgba(244, 244, 244, 0.6);
+  padding: 35px 50px;
+  color: #000;
+}
+
+.bkh-contact-body-upper-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.bkh-contact-text {
+  margin-top: 50px;
+}
+
+.bkh-contact-content {
+  color: #000;
+  text-align: center;
+}
+
+.bkh-contact-map-wrap {
+  text-align: right;
+  margin-right: -35px;
+}
+
+.bkh-contact-map {
+  border: 4px solid #fff;
+  max-width: 280px;
+  min-height: 280px;
+  z-index: 999;
+}
+
+/* .bkh-contact-form-col {
+  z-index: -1;
+} */
+
+.bkh-contact-form-wrap {
+  background-color: #e1e2e4;
+  padding: 35px 20px;
+  z-index: -1;
+}
+
+.bkh-contact-form-title {
+  color: #161616;
+  font-family: 'Freehand521 BT';
+  margin-bottom: 25px;
+}
+
+.bkh-contact-form-wrap .bkh-contact-input {
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.bkh-contact-form-wrap .input-field.col label {
+  left: 1.5rem;
+}
+
+.bkh-contact-form-submit {
+  background-color: #1f8de5;
+  color: #fff;
+  border-radius: 0px;
+}
+/* End Contact Us CSS */
+
+/* Home Page CSS */
+#bkh-home-slider .slides li .caption {
+  top: 35%;
+}
+
+#bkh-home-slider ul.indicators {
+  bottom: 15%;
+}
+
+.bkh-caption {
+  color: #fff;
+  font-family: 'Freehand521 BT';
+  margin-bottom: 15px;
+  font-size: 3rem;
+}
+
+.bkh-home-subcaption {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#bkh-home-slider .indicators .indicator-item {
+  border: 2px solid #fff;
+  background-color: transparent;
+  margin: 0px 5px;
+}
+
+#bkh-home-slider .indicators .indicator-item.active {
+  background-color: #fff;
+}
+
+.buttons-wrapper {
+  position: absolute;
+  height: calc(85vh);
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 997;
+  top: 0;
+  pointer-events: none;
+  width: 100%;
+}
+
+.buttons-wrapper a {
+  pointer-events: auto;
+  font-family: 'Freehand521 BT';
+  font-size: 2rem;
+  color: #595957;
+  background-color: #d8d8d8;
+  text-transform: capitalize;
+  border-radius: 5px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 3rem;
+}
+
+.buttons-wrapper a:hover {
+  color: #fff;
+}
+
+.buttons-wrapper a img {
+  top: 0px;
+  left: 5px;
+  position: absolute;
+  z-index: 11;
+  width: 45px;
+  padding-right: 5px;
+}
+
+.mg-rg {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 6rem;
+}
+/* End Home Page CSS */
+
+/* Responsive Styles */
+
+@media all and (max-width: 992px) {
+  nav .brand-logo {
+    position: absolute;
+  }
+  nav .button-collapse {
+    margin-left: 15px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .bkh-cart-mobile {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .bkh-cart-text {
+    display: none;
+  }
+  .bkh-cart-mobile {
+    display: inline-block;
+    padding-top: 5px;
+  }
+  .bkh-checkout-order-summary-table-wrapper {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .bkh-footer-wrapper {
+    flex-flow: row wrap;
+  }
+  .bkh-footer-social-navbar {
+    margin: auto 0 auto auto;
+  }
+  .bkh-footer-navbar {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .bkh-cnew-app-sublabel-last {
+    margin-bottom: 25px;
+  }
+  .bkh-cnew-openpos-wrapper {
+    width: 100%;
+  }
+  .bkh-cnew-viewjob-wrapper {
+    width: 100%;
+  }
+  .bkh-cnew-apply-btn span {
+    display: none;
+  }
+  .bkh-cnew-apply-btn i.material-icons {
+    display: initial;
+  }
+  .bkh-about-img-wrap + .bkh-about-img-wrap {
+    margin-top: 15px;
+  }
+  .bkh-about-team-img-wrap + .bkh-about-team-img-wrap {
+    margin-top: 35px;
+  }
+  .bkh-contact-body {
+    padding: 25px 15px;
+  }
+  .bkh-contact-map-wrap {
+    text-align: center;
+    margin-right: 0;
+  }
+  .bkh-contact-form-wrap {
+    margin-top: 20px;
+  }
+  .bkh-contact-title-wrap {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .bkh-contact-social-navs {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+  .bkh-caption {
+    font-size: 2rem;
+  }
+  .bkh-home-subcaption {
+    font-size: 1rem;
+  }
+  #bkh-home-slider ul.indicators {
+    bottom: 24%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .bkh-cnew-job-description-header {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .bkh-cnew-apply-btn {
+    margin-top: 10px;
+  }
+  .mg-sm {
+    margin-bottom: 30px;
+  }
+}
+

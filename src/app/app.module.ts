@@ -14,6 +14,8 @@ import { CartComponent } from './cart/cart.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { CareerDetailComponent } from './career-detail/career-detail.component';
+import { CareerApplyComponent } from './career-apply/career-apply.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
     CartComponent,
     TermsComponent,
     PrivacypolicyComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
+    CareerDetailComponent,
+    CareerApplyComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,161 @@
-<p>
-  cart works!
-</p>
+<!-- Banner -->
+  <div class="bkh-menu-banner"></div>
+<!-- End Banner -->
+
+<!-- Checkout -->
+  <div class="bkh-checkout-container">
+    <div class="container custom-container">
+      <div class="row">
+        <div class="col s12">
+          <div class="bkh-checkout-wrapper z-depth-1">
+            <div class="bkh-checkout-title center-align">
+              <h5>Tell us where to deliver your delicious eggnogTell us where to deliver your delicious eggnog</h5>
+            </div>
+            <div class="bkh-checkout-order-wrapper">
+              <div class="bkh-checkout-order-title walnut-bgcolor center-align">
+                <h5>Your Order Summary</h5>
+              </div>
+              <div class="bkh-checkout-order-body">
+                <div class="container">
+                  <form method="post" action="">
+                    <div class="bkh-checkout-order-summary-table-wrapper">
+                      <table class="highlight centered bkh-checkout-order-summary-table">
+                        <thead>
+                          <tr>
+                            <th>Product</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>
+                              <img src="/assets/images/food-item-small1.jpg" class="responsive-img summary-cart-img" alt="BKHFoodItem" />
+                            </td>
+                            <td class="bkh-checkout-order-prod-name">Walnut Baklava</td>
+                            <td>
+                              <div class="bkh-chkout-order-input-wrapper valign-wrapper">
+                                <label for="qty" class="bkh-menu-qty-label valign">Qty:</label>
+                                <div class="input-field">
+                                  <input placeholder="Qty" id="qty" type="text" name="quant[1]" class="input-number" value="" min="0" max="100" />
+                                </div>
+                                <div class="btn-wrapper">
+                                  <button type="button" class="btn btn-number"  data-type="plus" data-field="quant[1]"><i class="material-icons">add</i>
+                                  </button>
+                                  <button type="button" class="btn btn-number" data-type="minus" data-field="quant[1]">
+                                    <i class="material-icons">remove</i>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="bkh-checkout-order-summary-price">$33</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <img src="/assets/images/food-item-small2.jpg" class="responsive-img summary-cart-img" alt="BKHFoodItem" />
+                            </td>
+                            <td class="bkh-checkout-order-prod-name">Hazelnut Baklava</td>
+                            <td>
+                              <div class="bkh-chkout-order-input-wrapper valign-wrapper">
+                                <label for="qty" class="bkh-menu-qty-label valign">Qty:</label>
+                                <div class="input-field">
+                                  <input placeholder="Qty" id="qty" type="text" name="quant[2]" class="input-number" value="" min="0" max="100" />
+                                </div>
+                                <div class="btn-wrapper">
+                                  <button type="button" class="btn btn-number"  data-type="plus" data-field="quant[2]"><i class="material-icons">add</i>
+                                  </button>
+                                  <button type="button" class="btn btn-number" data-type="minus" data-field="quant[2]">
+                                    <i class="material-icons">remove</i>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="bkh-checkout-order-summary-price">$33</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                              <button class="btn waves-effect waves-light bkh-checkout-order-summary-update">UPDATE CART</button>
+                            </td>
+                            <td class="order-grand-total-text">
+                              Grand Total is:
+                            </td>
+                            <td class="order-grand-total">
+                              $66
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="bkh-checkout-shipping-wrapper">
+              <div class="bkh-checkout-shipping-title pistachio-bgcolor center-align">
+                <h5>Shipping Details</h5>
+              </div>
+              <div class="bkh-checkout-shipping-body">
+                <div class="bkh-checkout-shipping-form-wrapper">
+                  <form method="post" action="" name="shipping-details" class="bkh-checkout-shipping-details-form">
+                    <div class="container">
+                      <div class="row">
+                        <div class="input-field col m6 s12">
+                          <input id="first_name" type="text" class="validate shipping-input" name="fname">
+                          <label for="first_name" data-error="Error" data-success="Success">First Name</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="last_name" type="text" class="validate shipping-input" name="lname">
+                          <label for="last_name" data-error="Error" data-success="Success">Last Name</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="email" type="email" class="validate shipping-input" name="email">
+                          <label for="email" data-error="Error" data-success="Success">Email</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="phone" type="tel" class="validate shipping-input" name="phone">
+                          <label for="phone" data-error="Error" data-success="Success">Phone</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="pincode" type="text" class="validate shipping-input" name="pincode">
+                          <label for="pincode" data-error="Error" data-success="Success">Pincode</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="state" type="text" class="validate shipping-input" name="state">
+                          <label for="state" data-error="Error" data-success="Success">Pincode</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="district" type="text" class="validate shipping-input" name="district">
+                          <label for="district" data-error="Error" data-success="Success">District</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="country" type="text" class="validate shipping-input" name="country">
+                          <label for="country" data-error="Error" data-success="Success">Country</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <textarea id="country" name="address" class="materialize-textarea shipping-textarea"></textarea>
+                          <label for="country" data-error="Error" data-success="Success">Address</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                          <input id="city" type="text" class="validate shipping-input" name="city">
+                          <label for="city" data-error="Error" data-success="Success">City</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bkh-checkout-shipping-form-submit center-align">
+                      <button type="submit" class="btn waves-effect waves-light">PLACE ORDER</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Checkout -->
