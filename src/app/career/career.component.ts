@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-declare let jQuery: any;
+import { Career } from '../shared/models/career';
+import { CareerCategory } from '../shared/models/career-category';
+
+import { CareerService } from '../shared/services/career.service';
 
 @Component({
     selector: 'app-career',
@@ -8,13 +11,14 @@ declare let jQuery: any;
     styleUrls: ['./career.component.css']
 })
 export class CareerComponent implements OnInit {
+    careers: Career[] = [];
+    careerCategories: CareerCategory[] = [];
 
-    $: any = jQuery;
-
-    constructor() { }
+    constructor(
+        private careerService: CareerService) { }
 
     ngOnInit() {
-        this.$('#bkh-cnew-openpos-tabs').tabs();
+        this.careers = this.careerService.getCareers();
+        this.careerCategories = this.careerService.getCareerCategories();
     }
-
 }

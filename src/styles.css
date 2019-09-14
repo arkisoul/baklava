@@ -612,11 +612,10 @@ nav .brand-logo {
 
 .input-field label.active.active-label {
   font-family: 'Raleway Medium';
-  color: #292828;
-  font-size: 1rem;
-  margin-bottom: 5px;
+  color: #9e9e9e;
+  font-size: 0.9rem;
   left: 0.75rem;
-  top: 1px;
+  margin-top: -4px;
 }
 
 .bkh-cnew-app-form-wrapper .file-btn {
@@ -941,7 +940,7 @@ nav .brand-logo {
   color: #000;
   text-align: center;
 }
-
+.bkh-contact-map-box { z-index: 1; }
 .bkh-contact-map-wrap {
   text-align: right;
   margin-right: -35px;
@@ -972,14 +971,12 @@ nav .brand-logo {
 
 .bkh-contact-form-wrap .bkh-contact-input {
   border: none;
-  background-color: #fff;
-  font-size: 16px;
+  font-size: 15px;
+  margin-bottom: 4px;
+  padding: 0px 8px;
+  background-color: rgba(255, 235, 235, 0.8)
 }
-
-.bkh-contact-form-wrap .input-field.col label {
-  left: 1.5rem;
-}
-
+.bkh-contact-form-wrap .bkh-contact-input.error{border-bottom: 1px solid red;box-shadow: 0 1px 0 0 red;}
 .bkh-contact-form-submit {
   background-color: #1f8de5;
   color: #fff;
@@ -1064,6 +1061,11 @@ nav .brand-logo {
   margin-top: 6rem;
 }
 /* End Home Page CSS */
+
+/* New CSS */
+.form-hint {font-size:0.9rem;color:red;}
+.bkh-form-wrapper .input-field{margin-bottom:0.5rem;}
+/* End New CSS */
 
 /* Responsive Styles */
 

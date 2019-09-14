@@ -9,7 +9,7 @@
         <div class="col s12">
           <div class="bkh-checkout-wrapper z-depth-1">
             <div class="bkh-checkout-title center-align">
-              <h5>Tell us where to deliver your delicious eggnogTell us where to deliver your delicious eggnog</h5>
+              <h5>Tell us where to deliver your delicious eggnog</h5>
             </div>
             <div class="bkh-checkout-order-wrapper">
               <div class="bkh-checkout-order-title walnut-bgcolor center-align">
@@ -30,49 +30,32 @@
                         </thead>
 
                         <tbody>
-                          <tr>
-                            <td>
-                              <img src="/assets/images/food-item-small1.jpg" class="responsive-img summary-cart-img" alt="BKHFoodItem" />
-                            </td>
-                            <td class="bkh-checkout-order-prod-name">Walnut Baklava</td>
-                            <td>
-                              <div class="bkh-chkout-order-input-wrapper valign-wrapper">
-                                <label for="qty" class="bkh-menu-qty-label valign">Qty:</label>
-                                <div class="input-field">
-                                  <input placeholder="Qty" id="qty" type="text" name="quant[1]" class="input-number" value="" min="0" max="100" />
-                                </div>
-                                <div class="btn-wrapper">
-                                  <button type="button" class="btn btn-number"  data-type="plus" data-field="quant[1]"><i class="material-icons">add</i>
-                                  </button>
-                                  <button type="button" class="btn btn-number" data-type="minus" data-field="quant[1]">
-                                    <i class="material-icons">remove</i>
-                                  </button>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="bkh-checkout-order-summary-price">$33</td>
+                          <tr *ngIf="!cart">
+                            <td colspan="4">No item in your cart.</td>
                           </tr>
-                          <tr>
+                          <tr *ngFor="let item of cart;let i = index;">
                             <td>
-                              <img src="/assets/images/food-item-small2.jpg" class="responsive-img summary-cart-img" alt="BKHFoodItem" />
+                              <img src="{{ item.image }}" class="responsive-img summary-cart-img" alt="BKHFoodItem" />
                             </td>
-                            <td class="bkh-checkout-order-prod-name">Hazelnut Baklava</td>
+                            <td class="bkh-checkout-order-prod-name">{{ item.name }}</td>
                             <td>
                               <div class="bkh-chkout-order-input-wrapper valign-wrapper">
                                 <label for="qty" class="bkh-menu-qty-label valign">Qty:</label>
                                 <div class="input-field">
-                                  <input placeholder="Qty" id="qty" type="text" name="quant[2]" class="input-number" value="" min="0" max="100" />
+                                  <input placeholder="Qty" id="qty" type="text" name="quant[{{ item.productId }}]" class="input-number" value="{{ item.quantity }}" min="0" max="4" (change)="onChange($event)" (focusin)="onFocusIn($event)" (keydown)="onKeyDown($event)" #product />
                                 </div>
                                 <div class="btn-wrapper">
-                                  <button type="button" class="btn btn-number"  data-type="plus" data-field="quant[2]"><i class="material-icons">add</i>
+                                  <button type="button" class="btn btn-number"  data-type="plus" attr.data-field="quant[{{ item.productId }}]" (click)="onClick($event)"><i class="material-icons">add</i>
                                   </button>
-                                  <button type="button" class="btn btn-number" data-type="minus" data-field="quant[2]">
+                                  <button type="button" class="btn btn-number" data-type="minus" attr.data-field="quant[{{ item.productId }}]" (click)="onClick($event)">
                                     <i class="material-icons">remove</i>
                                   </button>
                                 </div>
                               </div>
                             </td>
-                            <td class="bkh-checkout-order-summary-price">$33</td>
+                            <td class="bkh-checkout-order-summary-price">
+                              <input type="text" value="${{ item.price * product.value }}" (change)="onTotalChange($event)">
+                            </td>
                           </tr>
                         </tbody>
                         <tfoot>
@@ -85,7 +68,7 @@
                               Grand Total is:
                             </td>
                             <td class="order-grand-total">
-                              $66
+                              ${{ cartTotal }}
                             </td>
                           </tr>
                         </tfoot>

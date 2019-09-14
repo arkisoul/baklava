@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
+import { SigninComponent } from '../signin/signin.component';
+import { SignupComponent } from '../signup/signup.component';
 import { AboutusComponent } from '../aboutus/aboutus.component';
 import { ContactusComponent } from '../contactus/contactus.component';
 import { MenuComponent } from '../menu/menu.component';
@@ -13,6 +15,8 @@ import { NoPageFoundComponent } from '../no-page-found/no-page-found.component';
 
 export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'signin', component: SigninComponent },
+    { path: 'signup', component: SignupComponent },
     { path: 'menu', component: MenuComponent },
     { path: 'aboutus', component: AboutusComponent },
     { path: 'contactus', component: ContactusComponent },

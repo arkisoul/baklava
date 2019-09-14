@@ -26,32 +26,41 @@
               <div class="bkh-contact-body-upper">
                 <div class="row">
                   <div class="bkh-contact-body-upper-wrapper">
-                    <div class="col l4 m5 s12">
+                    <div class="col l4 m5 s12 bkh-contact-map-box">
                       <div class="bkh-contact-map-wrap">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6492.186458509309!2d-119.9312322296083!3d46.831322919795014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5499a52629693d95%3A0xc3d19fa0f99f73b3!2sBeverly%2C+WA%2C+USA!5e0!3m2!1sen!2sin!4v1490621113694" width="100%" height="100%" frameborder="0" allowfullscreen class="bkh-contact-map hoverable"></iframe>
                       </div>
                     </div>
                     <div class="col l8 m7 s12 bkh-contact-form-col">
-                      <div class="bkh-contact-form-wrap">
-                        <form method="post" action="">
+                      <div class="bkh-contact-form-wrap bkh-form-wrapper">
+                        <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
                           <div class="bkh-contact-form-title center-align">
                             <h5>Please enter following details to get in touch with us...</h5>
                           </div>
                           <div class="row">
                             <div class="input-field col offset-l3 l6 offset-m2 m8 s12">
-                              <input type="text" name="name" id="name" class="validate bkh-contact-input">
-                              <label for="name" data-error="Error" data-success="Success" class="active-label">Your Name</label>
+                              <input type="text" formControlName="name" id="name" class="validate bkh-contact-input  {{ formErrors.name ? 'error' : '' }}" placeholder="Enter Your Name" required>
+                              <label for="name" class="active-label">Your Name</label>
+                              <p class="form-hint">
+                                <span [hidden]="!(formErrors.name)">{{formErrors.name}}</span>
+                              </p>
                             </div>
                             <div class="input-field col offset-l3 l6 offset-m2 m8 s12">
-                              <input type="email" name="email" id="email" class="validate bkh-contact-input">
-                              <label for="email" data-error="Error" data-success="Success" class="active-label">Your Email</label>
+                              <input type="email" formControlName="email" id="email" class="validate bkh-contact-input  {{ formErrors.email ? 'error' : '' }}" placeholder="Enter Your Email" required>
+                              <label for="email" class="active-label">Your Email</label>
+                              <p class="form-hint">
+                                <span [hidden]="!(formErrors.email)">{{formErrors.email}}</span>
+                              </p>
                             </div>
                             <div class="input-field col offset-l3 l6 offset-m2 m8 s12">
-                              <textarea id="msg" name="msg" class="materialize-textarea validate bkh-contact-input" data-length="500"></textarea>
-                              <label for="msg" data-error="Error" data-success="Success">Your Message</label>
+                              <input type="text" id="msg" formControlName="message" class="validate bkh-contact-input  {{ formErrors.message ? 'error' : '' }}" data-length="500" placeholder="Enter Your Message" required>
+                              <label for="msg" class="active-label">Your Message</label>
+                              <p class="form-hint">
+                                <span [hidden]="!(formErrors.message)">{{formErrors.message}}</span>
+                              </p>
                             </div>
                             <div class="input-field col offset-l3 l6 offset-m2 m8 s12">
-                              <button type="submit" class="btn waves-effect waves-light bkh-contact-form-submit">Submit</button>
+                              <button type="submit" class="btn waves-effect waves-light bkh-contact-form-submit" [disabled]="feedbackForm.invalid">Submit</button>
                             </div>
                           </div>
                         </form>

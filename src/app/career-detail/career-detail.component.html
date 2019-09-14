@@ -25,7 +25,7 @@
 <!-- End Career New -->
 
 <!-- Career Open Position -->
-  <div class="bkh-cnew-viewjob-container">
+  <div class="bkh-cnew-viewjob-container" *ngIf="career">
     <div class="container custom-container">
       <div class="row">
         <div class="col s12">
@@ -37,8 +37,8 @@
               <nav class="bkh-breadcrumb-nav">
                 <div class="nav-wrapper">
                   <div class="col s12">
-                    <a href="#!" class="breadcrumb">All</a>
-                    <a href="#!" class="breadcrumb">Job Title</a>
+                    <a routerLink="/career" class="breadcrumb">All</a>
+                    <span class="breadcrumb">{{ career.title }}</span>
                   </div>
                 </div>
               </nav>
@@ -46,10 +46,10 @@
             <div class="bkh-cnew-job-description-container">
               <div class="bkh-cnew-job-description-header">
                 <div class="bkh-cnew-job-title">
-                  <h4>Job Title <span class="bkh-cnew-job-city">- City</span></h4>
+                  <h4>{{ career.title }} <span class="bkh-cnew-job-city">- {{ career.city }}</span></h4>
                 </div>
                 <div class="bkh-cnew-job-apply">
-                  <a href="career-new-application.html" class="btn waves-effect waves-light bkh-cnew-apply-btn">Apply
+                  <a routerLink="/career/apply" class="btn waves-effect waves-light bkh-cnew-apply-btn">Apply
                   <span>for this job</span> <i class="left material-icons">touch_app</i></a>
                 </div>
               </div>
@@ -57,13 +57,13 @@
                 <div class="bkh-cnew-job-description">
                   <h5 class="bkh-cnew-job-des-title">Job Description</h5>
                   <p class="bkh-cnew-job-des">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    {{ career.description }}
                   </p>
                 </div>
                 <div class="bkh-cnew-job-requirement">
                   <h6 class="bkh-cnew-job-req-title">Requirements</h6>
                   <p class="bkh-cnew-job-req">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It hasndard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It hasndard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    {{ career.requirement }}
                   </p>
                 </div>
               </div>
